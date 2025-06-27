@@ -91,7 +91,7 @@ jobs:
 
       - name: Set up test environment variables
         run: |
-          echo "DB_CONNECTION=mysql_testing" >> .env
+          echo "DB_CONNECTION=mysql" >> .env
           echo "DB_HOST=mysql" >> .env
           echo "DB_PORT=3306" >> .env
           echo "DB_DATABASE=laravel_test" >> .env
