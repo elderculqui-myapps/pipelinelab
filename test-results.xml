@@ -1,158 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/app/phpunit.xml" tests="21" assertions="91" errors="1" failures="3" skipped="0" time="1.583750">
-    <testsuite name="Unit" tests="5" assertions="27" errors="0" failures="0" skipped="0" time="1.229353">
-      <testsuite name="Tests\Unit\ApiControllerTest" file="/app/tests/Unit/ApiControllerTest.php" tests="4" assertions="26" errors="0" failures="0" skipped="0" time="1.229226">
-        <testcase name="test_success_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="23" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="1.119288"/>
-        <testcase name="test_error_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="47" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.040124"/>
-        <testcase name="test_info_method" file="/app/tests/Unit/ApiControllerTest.php" line="71" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.036111"/>
-        <testcase name="test_health_method" file="/app/tests/Unit/ApiControllerTest.php" line="90" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.033704"/>
+  <testsuite name="/app/phpunit.xml" tests="21" assertions="102" errors="0" failures="0" skipped="0" time="0.710656">
+    <testsuite name="Unit" tests="5" assertions="27" errors="0" failures="0" skipped="0" time="0.204504">
+      <testsuite name="Tests\Unit\ApiControllerTest" file="/app/tests/Unit/ApiControllerTest.php" tests="4" assertions="26" errors="0" failures="0" skipped="0" time="0.192840">
+        <testcase name="test_success_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="23" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.158533"/>
+        <testcase name="test_error_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="47" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.010812"/>
+        <testcase name="test_info_method" file="/app/tests/Unit/ApiControllerTest.php" line="71" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.010819"/>
+        <testcase name="test_health_method" file="/app/tests/Unit/ApiControllerTest.php" line="90" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.012676"/>
       </testsuite>
-      <testsuite name="Tests\Unit\ExampleTest" file="/app/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.000127">
-        <testcase name="test_that_true_is_true" file="/app/tests/Unit/ExampleTest.php" line="12" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" assertions="1" time="0.000127"/>
+      <testsuite name="Tests\Unit\ExampleTest" file="/app/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.011664">
+        <testcase name="test_that_true_is_true" file="/app/tests/Unit/ExampleTest.php" line="12" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" assertions="1" time="0.011664"/>
       </testsuite>
     </testsuite>
-    <testsuite name="Feature" tests="16" assertions="64" errors="1" failures="3" skipped="0" time="0.354397">
-      <testsuite name="Tests\Feature\ApiBasicTest" file="/app/tests/Feature/ApiBasicTest.php" tests="4" assertions="21" errors="0" failures="0" skipped="0" time="0.120036">
-        <testcase name="test_api_health_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="12" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="8" time="0.081961"/>
-        <testcase name="test_api_info_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="35" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="9" time="0.012549"/>
-        <testcase name="test_api_returns_json_for_invalid_routes" file="/app/tests/Feature/ApiBasicTest.php" line="59" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.014306"/>
-        <testcase name="test_api_v1_example_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="71" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.011219"/>
+    <testsuite name="Feature" tests="16" assertions="75" errors="0" failures="0" skipped="0" time="0.506152">
+      <testsuite name="Tests\Feature\ApiBasicTest" file="/app/tests/Feature/ApiBasicTest.php" tests="4" assertions="21" errors="0" failures="0" skipped="0" time="0.067653">
+        <testcase name="test_api_health_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="12" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="8" time="0.031824"/>
+        <testcase name="test_api_info_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="35" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="9" time="0.010661"/>
+        <testcase name="test_api_returns_json_for_invalid_routes" file="/app/tests/Feature/ApiBasicTest.php" line="59" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.014870"/>
+        <testcase name="test_api_v1_example_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="71" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.010299"/>
       </testsuite>
-      <testsuite name="Tests\Feature\ExampleTest" file="/app/tests/Feature/ExampleTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.033673">
-        <testcase name="test_the_application_returns_a_successful_response" file="/app/tests/Feature/ExampleTest.php" line="13" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" assertions="0" time="0.033673">
-          <error type="RuntimeException">Tests\Feature\ExampleTest::test_the_application_returns_a_successful_response
-RuntimeException: Unsupported cipher or incorrect key length. Supported ciphers are: aes-128-cbc, aes-256-cbc, aes-128-gcm, aes-256-gcm.
-
-/app/vendor/laravel/framework/src/Illuminate/Encryption/Encrypter.php:61
-/app/vendor/laravel/framework/src/Illuminate/Encryption/EncryptionServiceProvider.php:32
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:1010
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:890
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1077
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:821
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1057
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:1202
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:1101
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:1052
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:890
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1077
-/app/vendor/laravel/framework/src/Illuminate/Container/Container.php:821
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1057
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:257
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:215
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:611
-/app/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php:368
-/app/tests/Feature/ExampleTest.php:15</error>
-        </testcase>
+      <testsuite name="Tests\Feature\ExampleTest" file="/app/tests/Feature/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.031055">
+        <testcase name="test_the_application_returns_a_successful_response" file="/app/tests/Feature/ExampleTest.php" line="13" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" assertions="1" time="0.031055"/>
       </testsuite>
-      <testsuite name="Tests\Feature\UserApiTest" file="/app/tests/Feature/UserApiTest.php" tests="11" assertions="43" errors="0" failures="3" skipped="0" time="0.200689">
-        <testcase name="test_can_get_empty_users_list" file="/app/tests/Feature/UserApiTest.php" line="16" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.029496"/>
-        <testcase name="test_can_get_users_list" file="/app/tests/Feature/UserApiTest.php" line="31" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="19" time="0.022718"/>
-        <testcase name="test_can_create_user" file="/app/tests/Feature/UserApiTest.php" line="61" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="1" time="0.021516">
-          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\UserApiTest::test_can_create_user
-Expected response status code [201] but received 422.
-Failed asserting that 422 is identical to 201.
-
-The following errors occurred during the last request:
-
-{
-    "success": false,
-    "message": "Validation failed",
-    "errors": {
-        "name": [
-            "The name field is required."
-        ],
-        "email": [
-            "The email field is required."
-        ],
-        "password": [
-            "The password field is required."
-        ]
-    }
-}
-
-/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:45
-/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:174
-/app/tests/Feature/UserApiTest.php:71</failure>
-        </testcase>
-        <testcase name="test_cannot_create_user_with_invalid_data" file="/app/tests/Feature/UserApiTest.php" line="97" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="5" time="0.011278"/>
-        <testcase name="test_can_get_specific_user" file="/app/tests/Feature/UserApiTest.php" line="122" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011854"/>
-        <testcase name="test_cannot_get_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="143" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.010741"/>
-        <testcase name="test_can_update_user" file="/app/tests/Feature/UserApiTest.php" line="157" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.046884">
-          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\UserApiTest::test_can_update_user
-Unable to find JSON: 
-
-[{
-    "success": true,
-    "message": "User updated successfully",
-    "data": {
-        "id": 1,
-        "name": "Updated Name",
-        "email": "updated@example.com"
-    }
-}]
-
-within response JSON:
-
-[{
-    "success": true,
-    "message": "User updated successfully",
-    "data": {
-        "id": 1,
-        "name": "Earnestine Barrows",
-        "email": "dorian.oconner@example.org",
-        "updated_at": "2025-06-27T20:36:34.000000Z"
-    }
-}].
-
-
-Failed asserting that an array has the subset Array &amp;0 [
-    'success' =&gt; true,
-    'message' =&gt; 'User updated successfully',
-    'data' =&gt; Array &amp;1 [
-        'id' =&gt; 1,
-        'name' =&gt; 'Updated Name',
-        'email' =&gt; 'updated@example.com',
-    ],
-].
---- Expected
-+++ Actual
-@@ @@
-   'data' =&gt; 
-   array (
-     'id' =&gt; 1,
--    'name' =&gt; 'Updated Name',
--    'email' =&gt; 'updated@example.com',
-+    'name' =&gt; 'Earnestine Barrows',
-+    'email' =&gt; 'dorian.oconner@example.org',
-     'updated_at' =&gt; '2025-06-27T20:36:34.000000Z',
-   ),
- )
-
-/app/vendor/laravel/framework/src/Illuminate/Testing/Constraints/ArraySubset.php:80
-/app/vendor/laravel/framework/src/Illuminate/Testing/Assert.php:36
-/app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:319
-/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:833
-/app/tests/Feature/UserApiTest.php:169</failure>
-        </testcase>
-        <testcase name="test_cannot_update_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="190" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.010988"/>
-        <testcase name="test_can_delete_user" file="/app/tests/Feature/UserApiTest.php" line="208" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.012830"/>
-        <testcase name="test_cannot_delete_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="229" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.010694"/>
-        <testcase name="test_cannot_create_user_with_duplicate_email" file="/app/tests/Feature/UserApiTest.php" line="243" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.011689">
-          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\UserApiTest::test_cannot_create_user_with_duplicate_email
-Failed asserting that two arrays are identical.
---- Expected
-+++ Actual
-@@ @@
- Array &amp;0 [
--    0 =&gt; 'The email has already been taken.',
-+    0 =&gt; 'The email field is required.',
- ]
-
-/app/vendor/laravel/framework/src/Illuminate/Testing/AssertableJsonString.php:243
-/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:856
-/app/tests/Feature/UserApiTest.php:260</failure>
-        </testcase>
+      <testsuite name="Tests\Feature\UserApiTest" file="/app/tests/Feature/UserApiTest.php" tests="11" assertions="53" errors="0" failures="0" skipped="0" time="0.407443">
+        <testcase name="test_can_get_empty_users_list" file="/app/tests/Feature/UserApiTest.php" line="22" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.238783"/>
+        <testcase name="test_can_get_users_list" file="/app/tests/Feature/UserApiTest.php" line="37" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="19" time="0.025333"/>
+        <testcase name="test_can_create_user" file="/app/tests/Feature/UserApiTest.php" line="67" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="10" time="0.035272"/>
+        <testcase name="test_cannot_create_user_with_invalid_data" file="/app/tests/Feature/UserApiTest.php" line="103" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="5" time="0.015406"/>
+        <testcase name="test_can_get_specific_user" file="/app/tests/Feature/UserApiTest.php" line="128" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.014288"/>
+        <testcase name="test_cannot_get_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="149" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011908"/>
+        <testcase name="test_can_update_user" file="/app/tests/Feature/UserApiTest.php" line="163" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.016047"/>
+        <testcase name="test_cannot_update_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="196" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011285"/>
+        <testcase name="test_can_delete_user" file="/app/tests/Feature/UserApiTest.php" line="214" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.014419"/>
+        <testcase name="test_cannot_delete_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="235" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011127"/>
+        <testcase name="test_cannot_create_user_with_duplicate_email" file="/app/tests/Feature/UserApiTest.php" line="249" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.013575"/>
       </testsuite>
     </testsuite>
   </testsuite>

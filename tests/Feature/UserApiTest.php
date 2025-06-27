@@ -4,11 +4,17 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 
 class UserApiTest extends TestCase
 {
-    use WithFaker;
+    use WithFaker, RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+    }
 
     /**
      * Test getting all users when database is empty
@@ -66,7 +72,7 @@ class UserApiTest extends TestCase
             'password' => 'password123'
         ];
 
-        $response = $this->post('/api/v1/users', $userData);
+        $response = $this->postJson(route('users.store', $userData));
 
         $response->assertStatus(201)
                 ->assertJson([
@@ -102,7 +108,7 @@ class UserApiTest extends TestCase
             'password' => '123' // Password muy corto
         ];
 
-        $response = $this->post('/api/v1/users', $userData);
+        $response = $this->postJson(route('users.store', $userData));
 
         $response->assertStatus(422)
                 ->assertJson([
@@ -163,7 +169,7 @@ class UserApiTest extends TestCase
             'email' => 'updated@example.com'
         ];
 
-        $response = $this->put("/api/v1/users/{$user->id}", $updateData);
+        $response = $this->putJson(route('users.update', $user->id), $updateData);
 
         $response->assertStatus(200)
                 ->assertJson([
@@ -193,7 +199,7 @@ class UserApiTest extends TestCase
             'name' => 'Updated Name'
         ];
 
-        $response = $this->put('/api/v1/users/999', $updateData);
+        $response = $this->putJson(route('users.update', 999), $updateData);
 
         $response->assertStatus(404)
                 ->assertJson([
@@ -209,7 +215,7 @@ class UserApiTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $response = $this->delete("/api/v1/users/{$user->id}");
+        $response = $this->deleteJson(route('users.destroy', $user->id));
 
         $response->assertStatus(200)
                 ->assertJson([
@@ -228,7 +234,7 @@ class UserApiTest extends TestCase
      */
     public function test_cannot_delete_nonexistent_user(): void
     {
-        $response = $this->delete('/api/v1/users/999');
+        $response = $this->deleteJson(route('users.destroy', 999));
 
         $response->assertStatus(404)
                 ->assertJson([
@@ -242,15 +248,15 @@ class UserApiTest extends TestCase
      */
     public function test_cannot_create_user_with_duplicate_email(): void
     {
-        $existingUser = User::factory()->create();
+        $user = User::factory()->create();
 
         $userData = [
             'name' => 'New User',
-            'email' => $existingUser->email, // Email duplicado
+            'email' => $user->email, // Email duplicado
             'password' => 'password123'
         ];
 
-        $response = $this->post('/api/v1/users', $userData);
+        $response = $this->postJson('/api/v1/users', $userData);
 
         $response->assertStatus(422)
                 ->assertJson([

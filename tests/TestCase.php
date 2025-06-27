@@ -3,12 +3,9 @@
 namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 abstract class TestCase extends BaseTestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();
@@ -18,5 +15,10 @@ abstract class TestCase extends BaseTestCase
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
         ]);
+
+        // Asegurar que estamos usando la base de datos de testing correcta
+        if (app()->environment('testing')) {
+            config(['database.default' => 'mysql_testing']);
+        }
     }
 }
