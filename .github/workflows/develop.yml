@@ -89,8 +89,18 @@ jobs:
       - name: Generate application key
         run: php artisan key:generate
 
-      - name: Create SQLite database for testing
-        run: touch database/database.sqlite
+      - name: Set up test environment variables
+        run: |
+          echo "DB_CONNECTION=mysql_testing" >> .env
+          echo "DB_HOST=mysql" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_DATABASE=laravel_test" >> .env
+          echo "DB_USERNAME=laravel" >> .env
+          echo "DB_PASSWORD=password" >> .env
+
+      - name: Wait for MySQL to be ready
+        run: |
+          until php -r "try { new PDO('mysql:host=mysql;port=3306;dbname=laravel_test', 'laravel', 'password'); echo 'MySQL is ready'; } catch(Exception \$e) { echo 'Waiting for MySQL...'; sleep(1); exit(1); }"; do sleep 1; done
 
       - name: Run database migrations
         run: php artisan migrate --env=testing --force
