@@ -17,8 +17,8 @@ abstract class TestCase extends BaseTestCase
         ]);
 
         // Asegurar que estamos usando la base de datos de testing correcta
-        if (app()->environment('testing')) {
-            config(['database.default' => 'mysql_testing']);
-        }
+        // if (app()->environment('testing')) {
+        //     config(['database.default' => 'mysql_testing']);
+        // }
     }
 }
