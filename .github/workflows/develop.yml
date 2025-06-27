@@ -70,7 +70,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, pdo_mysql
           coverage: xdebug
 
       - name: Restore Composer dependencies
@@ -100,10 +100,16 @@ jobs:
 
       - name: Wait for MySQL to be ready
         run: |
-          until php -r "try { new PDO('mysql:host=mysql;port=3306;dbname=laravel_test', 'root', 'root'); echo 'MySQL is ready'; } catch(Exception \$e) { echo 'Waiting for MySQL...'; sleep(1); exit(1); }"; do sleep 1; done
-
+          for i in {1..60}; do
+            if mysql -h127.0.0.1 -uroot -proot -e "SELECT 1"; then
+              echo "MySQL is up!"
+              break
+            fi
+            echo "Waiting for MySQL ($i)..."
+            sleep 1
+          done
       - name: Run database migrations
-        run: php artisan migrate --env=testing --force
+        run: php artisan migrate --force
 
       - name: Run PHPUnit tests with coverage
         run: ./vendor/bin/phpunit --coverage-clover=coverage.xml --log-junit=test-results.xml
