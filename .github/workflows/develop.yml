@@ -91,18 +91,12 @@ jobs:
 
       - name: Set up test environment variables
         run: |
+          sed -i 's/^DB_HOST=.*/DB_HOST=mysql/' .env || echo "DB_HOST=mysql" >> .env
           echo "DB_CONNECTION=mysql" >> .env
-          echo "DB_HOST=mysql" >> .env
           echo "DB_PORT=3306" >> .env
           echo "DB_DATABASE=laravel_test" >> .env
           echo "DB_USERNAME=root" >> .env
           echo "DB_PASSWORD=root" >> .env
-
-      - name: Ensure DB_HOST in .env.testing
-        run: |
-          if [ -f .env.testing ]; then
-            sed -i 's/^DB_HOST=.*/DB_HOST=mysql/' .env
-          fi
 
       - name: Wait for MySQL to be ready
         run: |
