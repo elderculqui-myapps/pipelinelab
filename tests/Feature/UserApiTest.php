@@ -11,11 +11,6 @@ class UserApiTest extends TestCase
 {
     use WithFaker, RefreshDatabase;
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-    }
-
     /**
      * Test getting all users when database is empty
      */
