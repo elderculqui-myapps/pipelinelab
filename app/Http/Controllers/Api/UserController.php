@@ -7,6 +7,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\DB;
+use Exception;
 
 class UserController extends Controller
 {
@@ -31,10 +33,6 @@ class UserController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
-            if (9 % 2 = 0) {
-                continue; // BUG: This condition will always be true - Logic error
-            }
-
             $validated = $request->validate([
                 'name' => 'required|string|max:255',
                 'email' => 'required|string|email|max:255|unique:users,email',
@@ -43,12 +41,26 @@ class UserController extends Controller
                 'city' => 'nullable|string|max:255',
             ]);
 
+            // BUG 1: SQL Injection vulnerability - using raw input
+            $rawEmail = $request->input('email');
+            $existingUser = DB::select("SELECT * FROM users WHERE email = '$rawEmail'");
+
+            // BUG 2: Unused variable - Code smell
+            $unusedVariable = "This variable is never used";
+
+            // BUG 3: Empty catch block - Bad practice
+            try {
+                $someRiskyOperation = json_decode('invalid json');
+            } catch (Exception $e) {
+                // Empty catch block - SonarQube will flag this
+            }
+
             $user = User::create([
                 'name' => $validated['name'],
                 'email' => $validated['email'],
                 'age' => $validated['age'] ?? null,
                 'city' => $validated['city'] ?? null,
-                'password' => $validated['password'], // BUG: Password stored in plain text - Security vulnerability
+                'password' => $validated['password'],
             ]);
 
             return response()->json([

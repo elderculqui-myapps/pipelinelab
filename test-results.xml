@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\phpunit.xml" tests="21" assertions="104" errors="0" failures="0" skipped="0" time="1.177115">
-    <testsuite name="Unit" tests="5" assertions="27" errors="0" failures="0" skipped="0" time="0.249808">
-      <testsuite name="Tests\Unit\ApiControllerTest" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Unit\ApiControllerTest.php" tests="4" assertions="26" errors="0" failures="0" skipped="0" time="0.242443">
-        <testcase name="test_success_response_method" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Unit\ApiControllerTest.php" line="23" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.197370"/>
-        <testcase name="test_error_response_method" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Unit\ApiControllerTest.php" line="47" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.014959"/>
-        <testcase name="test_info_method" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Unit\ApiControllerTest.php" line="71" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.014779"/>
-        <testcase name="test_health_method" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Unit\ApiControllerTest.php" line="90" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.015335"/>
+  <testsuite name="/app/phpunit.xml" tests="21" assertions="104" errors="0" failures="0" skipped="0" time="0.681846">
+    <testsuite name="Unit" tests="5" assertions="27" errors="0" failures="0" skipped="0" time="0.192725">
+      <testsuite name="Tests\Unit\ApiControllerTest" file="/app/tests/Unit/ApiControllerTest.php" tests="4" assertions="26" errors="0" failures="0" skipped="0" time="0.182378">
+        <testcase name="test_success_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="23" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.148203"/>
+        <testcase name="test_error_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="47" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.011084"/>
+        <testcase name="test_info_method" file="/app/tests/Unit/ApiControllerTest.php" line="71" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.010008"/>
+        <testcase name="test_health_method" file="/app/tests/Unit/ApiControllerTest.php" line="90" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.013084"/>
       </testsuite>
-      <testsuite name="Tests\Unit\ExampleTest" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Unit\ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.007365">
-        <testcase name="test_that_true_is_true" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Unit\ExampleTest.php" line="12" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" assertions="1" time="0.007365"/>
+      <testsuite name="Tests\Unit\ExampleTest" file="/app/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.010347">
+        <testcase name="test_that_true_is_true" file="/app/tests/Unit/ExampleTest.php" line="12" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" assertions="1" time="0.010347"/>
       </testsuite>
     </testsuite>
-    <testsuite name="Feature" tests="16" assertions="77" errors="0" failures="0" skipped="0" time="0.927308">
-      <testsuite name="Tests\Feature\ApiBasicTest" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\ApiBasicTest.php" tests="4" assertions="21" errors="0" failures="0" skipped="0" time="0.082657">
-        <testcase name="test_api_health_endpoint" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\ApiBasicTest.php" line="12" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="8" time="0.033499"/>
-        <testcase name="test_api_info_endpoint" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\ApiBasicTest.php" line="35" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="9" time="0.015221"/>
-        <testcase name="test_api_returns_json_for_invalid_routes" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\ApiBasicTest.php" line="59" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.018205"/>
-        <testcase name="test_api_v1_example_endpoint" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\ApiBasicTest.php" line="71" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.015731"/>
+    <testsuite name="Feature" tests="16" assertions="77" errors="0" failures="0" skipped="0" time="0.489121">
+      <testsuite name="Tests\Feature\ApiBasicTest" file="/app/tests/Feature/ApiBasicTest.php" tests="4" assertions="21" errors="0" failures="0" skipped="0" time="0.070459">
+        <testcase name="test_api_health_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="12" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="8" time="0.030242"/>
+        <testcase name="test_api_info_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="35" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="9" time="0.012129"/>
+        <testcase name="test_api_returns_json_for_invalid_routes" file="/app/tests/Feature/ApiBasicTest.php" line="59" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.016438"/>
+        <testcase name="test_api_v1_example_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="71" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.011650"/>
       </testsuite>
-      <testsuite name="Tests\Feature\ExampleTest" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.034346">
-        <testcase name="test_the_application_returns_a_successful_response" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\ExampleTest.php" line="13" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" assertions="1" time="0.034346"/>
+      <testsuite name="Tests\Feature\ExampleTest" file="/app/tests/Feature/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.030353">
+        <testcase name="test_the_application_returns_a_successful_response" file="/app/tests/Feature/ExampleTest.php" line="13" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" assertions="1" time="0.030353"/>
       </testsuite>
-      <testsuite name="Tests\Feature\UserApiTest" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" tests="11" assertions="55" errors="0" failures="0" skipped="0" time="0.810305">
-        <testcase name="test_can_get_empty_users_list" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="17" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.477156"/>
-        <testcase name="test_can_get_users_list" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="32" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="19" time="0.039345"/>
-        <testcase name="test_can_create_user" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="62" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="12" time="0.045207"/>
-        <testcase name="test_cannot_create_user_with_invalid_data" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="104" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="5" time="0.024509"/>
-        <testcase name="test_can_get_specific_user" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="129" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.031430"/>
-        <testcase name="test_cannot_get_nonexistent_user" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="150" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.029011"/>
-        <testcase name="test_can_update_user" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="164" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.038871"/>
-        <testcase name="test_cannot_update_nonexistent_user" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="197" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.024987"/>
-        <testcase name="test_can_delete_user" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="215" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.037062"/>
-        <testcase name="test_cannot_delete_nonexistent_user" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="236" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.029778"/>
-        <testcase name="test_cannot_create_user_with_duplicate_email" file="C:\Users\Elder Orlando Test\Documents\Projects\pipelinelab\tests\Feature\UserApiTest.php" line="250" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.032950"/>
+      <testsuite name="Tests\Feature\UserApiTest" file="/app/tests/Feature/UserApiTest.php" tests="11" assertions="55" errors="0" failures="0" skipped="0" time="0.388309">
+        <testcase name="test_can_get_empty_users_list" file="/app/tests/Feature/UserApiTest.php" line="17" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.229129"/>
+        <testcase name="test_can_get_users_list" file="/app/tests/Feature/UserApiTest.php" line="32" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="19" time="0.023646"/>
+        <testcase name="test_can_create_user" file="/app/tests/Feature/UserApiTest.php" line="62" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="12" time="0.031670"/>
+        <testcase name="test_cannot_create_user_with_invalid_data" file="/app/tests/Feature/UserApiTest.php" line="104" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="5" time="0.014176"/>
+        <testcase name="test_can_get_specific_user" file="/app/tests/Feature/UserApiTest.php" line="129" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.013402"/>
+        <testcase name="test_cannot_get_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="150" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011220"/>
+        <testcase name="test_can_update_user" file="/app/tests/Feature/UserApiTest.php" line="164" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.015197"/>
+        <testcase name="test_cannot_update_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="197" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.010644"/>
+        <testcase name="test_can_delete_user" file="/app/tests/Feature/UserApiTest.php" line="215" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.014388"/>
+        <testcase name="test_cannot_delete_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="236" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.010852"/>
+        <testcase name="test_cannot_create_user_with_duplicate_email" file="/app/tests/Feature/UserApiTest.php" line="250" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.013986"/>
       </testsuite>
     </testsuite>
   </testsuite>
