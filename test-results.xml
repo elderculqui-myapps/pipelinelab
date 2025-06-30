@@ -1,39 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/app/phpunit.xml" tests="21" assertions="102" errors="0" failures="0" skipped="0" time="0.741715">
-    <testsuite name="Unit" tests="5" assertions="27" errors="0" failures="0" skipped="0" time="0.211607">
-      <testsuite name="Tests\Unit\ApiControllerTest" file="/app/tests/Unit/ApiControllerTest.php" tests="4" assertions="26" errors="0" failures="0" skipped="0" time="0.199967">
-        <testcase name="test_success_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="23" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.167011"/>
-        <testcase name="test_error_response_method" file="/app/tests/Unit/ApiControllerTest.php" line="47" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="5" time="0.010692"/>
-        <testcase name="test_info_method" file="/app/tests/Unit/ApiControllerTest.php" line="71" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.010206"/>
-        <testcase name="test_health_method" file="/app/tests/Unit/ApiControllerTest.php" line="90" class="Tests\Unit\ApiControllerTest" classname="Tests.Unit.ApiControllerTest" assertions="8" time="0.012058"/>
-      </testsuite>
-      <testsuite name="Tests\Unit\ExampleTest" file="/app/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.011641">
-        <testcase name="test_that_true_is_true" file="/app/tests/Unit/ExampleTest.php" line="12" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" assertions="1" time="0.011641"/>
-      </testsuite>
-    </testsuite>
-    <testsuite name="Feature" tests="16" assertions="75" errors="0" failures="0" skipped="0" time="0.530108">
-      <testsuite name="Tests\Feature\ApiBasicTest" file="/app/tests/Feature/ApiBasicTest.php" tests="4" assertions="21" errors="0" failures="0" skipped="0" time="0.068624">
-        <testcase name="test_api_health_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="12" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="8" time="0.032693"/>
-        <testcase name="test_api_info_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="35" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="9" time="0.010723"/>
-        <testcase name="test_api_returns_json_for_invalid_routes" file="/app/tests/Feature/ApiBasicTest.php" line="59" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.014665"/>
-        <testcase name="test_api_v1_example_endpoint" file="/app/tests/Feature/ApiBasicTest.php" line="71" class="Tests\Feature\ApiBasicTest" classname="Tests.Feature.ApiBasicTest" assertions="2" time="0.010544"/>
-      </testsuite>
-      <testsuite name="Tests\Feature\ExampleTest" file="/app/tests/Feature/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.032978">
-        <testcase name="test_the_application_returns_a_successful_response" file="/app/tests/Feature/ExampleTest.php" line="13" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" assertions="1" time="0.032978"/>
-      </testsuite>
-      <testsuite name="Tests\Feature\UserApiTest" file="/app/tests/Feature/UserApiTest.php" tests="11" assertions="53" errors="0" failures="0" skipped="0" time="0.428506">
-        <testcase name="test_can_get_empty_users_list" file="/app/tests/Feature/UserApiTest.php" line="17" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.261152"/>
-        <testcase name="test_can_get_users_list" file="/app/tests/Feature/UserApiTest.php" line="32" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="19" time="0.025476"/>
-        <testcase name="test_can_create_user" file="/app/tests/Feature/UserApiTest.php" line="62" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="10" time="0.036629"/>
-        <testcase name="test_cannot_create_user_with_invalid_data" file="/app/tests/Feature/UserApiTest.php" line="98" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="5" time="0.015197"/>
-        <testcase name="test_can_get_specific_user" file="/app/tests/Feature/UserApiTest.php" line="123" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.013503"/>
-        <testcase name="test_cannot_get_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="144" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.010919"/>
-        <testcase name="test_can_update_user" file="/app/tests/Feature/UserApiTest.php" line="158" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.015280"/>
-        <testcase name="test_cannot_update_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="191" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011295"/>
-        <testcase name="test_can_delete_user" file="/app/tests/Feature/UserApiTest.php" line="209" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.014532"/>
-        <testcase name="test_cannot_delete_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="230" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011109"/>
-        <testcase name="test_cannot_create_user_with_duplicate_email" file="/app/tests/Feature/UserApiTest.php" line="244" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.013415"/>
+  <testsuite name="/app/phpunit.xml" tests="11" assertions="54" errors="0" failures="0" skipped="0" time="0.548839">
+    <testsuite name="Feature" tests="11" assertions="54" errors="0" failures="0" skipped="0" time="0.548839">
+      <testsuite name="Tests\Feature\UserApiTest" file="/app/tests/Feature/UserApiTest.php" tests="11" assertions="54" errors="0" failures="0" skipped="0" time="0.548839">
+        <testcase name="test_can_get_empty_users_list" file="/app/tests/Feature/UserApiTest.php" line="17" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.380163"/>
+        <testcase name="test_can_get_users_list" file="/app/tests/Feature/UserApiTest.php" line="32" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="19" time="0.028599"/>
+        <testcase name="test_can_create_user" file="/app/tests/Feature/UserApiTest.php" line="62" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="11" time="0.032458"/>
+        <testcase name="test_cannot_create_user_with_invalid_data" file="/app/tests/Feature/UserApiTest.php" line="101" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="5" time="0.014209"/>
+        <testcase name="test_can_get_specific_user" file="/app/tests/Feature/UserApiTest.php" line="126" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.013517"/>
+        <testcase name="test_cannot_get_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="147" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.010922"/>
+        <testcase name="test_can_update_user" file="/app/tests/Feature/UserApiTest.php" line="161" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.014763"/>
+        <testcase name="test_cannot_update_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="194" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.011104"/>
+        <testcase name="test_can_delete_user" file="/app/tests/Feature/UserApiTest.php" line="212" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.014589"/>
+        <testcase name="test_cannot_delete_nonexistent_user" file="/app/tests/Feature/UserApiTest.php" line="233" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="2" time="0.013382"/>
+        <testcase name="test_cannot_create_user_with_duplicate_email" file="/app/tests/Feature/UserApiTest.php" line="247" class="Tests\Feature\UserApiTest" classname="Tests.Feature.UserApiTest" assertions="3" time="0.015134"/>
       </testsuite>
     </testsuite>
   </testsuite>
