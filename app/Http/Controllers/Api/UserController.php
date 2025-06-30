@@ -44,7 +44,7 @@ class UserController extends Controller
                 'email' => $validated['email'],
                 'age' => $validated['age'] ?? null,
                 'city' => $validated['city'] ?? null,
-                'password' => bcrypt($validated['password']),
+                'password' => $validated['password'], // BUG: Password stored in plain text - Security vulnerability
             ]);
 
             return response()->json([
