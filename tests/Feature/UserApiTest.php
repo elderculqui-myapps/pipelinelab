@@ -63,6 +63,7 @@ class UserApiTest extends TestCase
     {
         $userData = [
             'name' => $this->faker->name,
+            'age' => rand(0, 100),
             'email' => $this->faker->unique()->safeEmail,
             'password' => 'password123'
         ];
@@ -80,6 +81,7 @@ class UserApiTest extends TestCase
                     'data' => [
                         'id',
                         'name',
+                        'age',
                         'email',
                         'created_at'
                     ]
@@ -88,7 +90,8 @@ class UserApiTest extends TestCase
         // Verificar que el usuario fue creado en la base de datos
         $this->assertDatabaseHas('users', [
             'name' => $userData['name'],
-            'email' => $userData['email']
+            'email' => $userData['email'],
+            'age' => $userData['age'],
         ]);
     }
 
