@@ -65,7 +65,8 @@ class UserApiTest extends TestCase
             'name' => $this->faker->name,
             'age' => rand(0, 100),
             'email' => $this->faker->unique()->safeEmail,
-            'password' => 'password123'
+            'password' => 'password123',
+            'city' => $this->faker->city()
         ];
 
         $response = $this->postJson(route('users.store', $userData));
@@ -83,6 +84,7 @@ class UserApiTest extends TestCase
                         'name',
                         'age',
                         'email',
+                        'city',
                         'created_at'
                     ]
                 ]);
@@ -92,6 +94,7 @@ class UserApiTest extends TestCase
             'name' => $userData['name'],
             'email' => $userData['email'],
             'age' => $userData['age'],
+            'city' => $userData['city'],
         ]);
     }
 

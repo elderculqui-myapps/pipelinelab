@@ -35,19 +35,21 @@ class UserController extends Controller
                 'email' => 'required|string|email|max:255|unique:users,email',
                 'age' => 'nullable|integer|min:0|max:150',
                 'password' => 'required|string|min:8',
+                'city' => 'nullable|string|max:255',
             ]);
 
             $user = User::create([
                 'name' => $validated['name'],
                 'email' => $validated['email'],
                 'age' => $validated['age'] ?? null,
+                'city' => $validated['city'] ?? null,
                 'password' => bcrypt($validated['password']),
             ]);
 
             return response()->json([
                 'success' => true,
                 'message' => 'User created successfully',
-                'data' => $user->only(['id', 'name', 'age', 'email', 'created_at']),
+                'data' => $user->only(['id', 'name', 'age', 'email', 'city', 'created_at']),
             ], 201);
 
         } catch (ValidationException $e) {
