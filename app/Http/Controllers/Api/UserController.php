@@ -31,6 +31,10 @@ class UserController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            if (9 % 2 = 0) {
+                continue; // BUG: This condition will always be true - Logic error
+            }
+
             $validated = $request->validate([
                 'name' => 'required|string|max:255',
                 'email' => 'required|string|email|max:255|unique:users,email',
