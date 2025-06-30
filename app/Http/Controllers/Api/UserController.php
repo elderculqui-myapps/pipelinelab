@@ -26,6 +26,7 @@ class UserController extends Controller
 
     /**
      * Store a newly created user in storage.
+     * Comment: This method handles the creation of a new user.
      */
     public function store(Request $request): JsonResponse
     {
