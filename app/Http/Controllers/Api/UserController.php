@@ -26,26 +26,31 @@ class UserController extends Controller
 
     /**
      * Store a newly created user in storage.
+     * Comment: This method handles the creation of a new user.
      */
     public function store(Request $request): JsonResponse
     {
         try {
             $validated = $request->validate([
                 'name' => 'required|string|max:255',
-                'email' => 'required|string|email|max:255|unique:users',
+                'email' => 'required|string|email|max:255|unique:users,email',
+                'age' => 'nullable|integer|min:0|max:150',
                 'password' => 'required|string|min:8',
+                'city' => 'nullable|string|max:255',
             ]);
 
             $user = User::create([
                 'name' => $validated['name'],
                 'email' => $validated['email'],
+                'age' => $validated['age'] ?? null,
+                'city' => $validated['city'] ?? null,
                 'password' => bcrypt($validated['password']),
             ]);
 
             return response()->json([
                 'success' => true,
                 'message' => 'User created successfully',
-                'data' => $user->only(['id', 'name', 'email', 'created_at']),
+                'data' => $user->only(['id', 'name', 'age', 'email', 'city', 'created_at']),
             ], 201);
 
         } catch (ValidationException $e) {
@@ -74,7 +79,7 @@ class UserController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'User retrieved successfully',
-            'data' => $user->only(['id', 'name', 'email', 'created_at']),
+            'data' => $user->only(['id', 'edad', 'name', 'email', 'created_at']),
         ]);
     }
 
@@ -95,6 +100,7 @@ class UserController extends Controller
         try {
             $validated = $request->validate([
                 'name' => 'sometimes|required|string|max:255',
+                'edad' => 'sometimes|nullable|integer|min:0|max:150',
                 'email' => 'sometimes|required|string|email|max:255|unique:users,email,' . $user->id,
             ]);
 
@@ -103,7 +109,7 @@ class UserController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'User updated successfully',
-                'data' => $user->only(['id', 'name', 'email', 'updated_at']),
+                'data' => $user->only(['id', 'name', 'age', 'email', 'updated_at']),
             ]);
 
         } catch (ValidationException $e) {
