@@ -41,10 +41,6 @@ class UserController extends Controller
                 'city' => 'nullable|string|max:255',
             ]);
 
-            if (9 % 2 = 0) {
-                continue;
-            }
-
             $user = User::create([
                 'name' => $validated['name'],
                 'email' => $validated['email'],
