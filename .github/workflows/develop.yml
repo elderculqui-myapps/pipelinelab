@@ -143,10 +143,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download test artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: test-reports
+      # - name: Download test artifacts
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: test-reports
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v3
