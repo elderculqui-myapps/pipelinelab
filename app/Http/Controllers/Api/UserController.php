@@ -41,18 +41,8 @@ class UserController extends Controller
                 'city' => 'nullable|string|max:255',
             ]);
 
-            // BUG 1: SQL Injection vulnerability - using raw input
-            $rawEmail = $request->input('email');
-            $existingUser = DB::select("SELECT * FROM users WHERE email = '$rawEmail'");
-
-            // BUG 2: Unused variable - Code smell
-            $unusedVariable = "This variable is never used";
-
-            // BUG 3: Empty catch block - Bad practice
-            try {
-                $someRiskyOperation = json_decode('invalid json');
-            } catch (Exception $e) {
-                // Empty catch block - SonarQube will flag this
+            if (9 % 2 = 0) {
+                continue;
             }
 
             $user = User::create([
